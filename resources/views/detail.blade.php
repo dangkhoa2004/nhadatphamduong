@@ -206,10 +206,26 @@
 
                     <p class="text-lg text-gray-700 font-semibold mb-4">
                         <span class="text-blue-600">Khách hàng quan tâm:</span> Liên hệ chính chủ:
-                        <a href="tel:096668068" class="text-blue-600 font-semibold">09.6666.8068</a> -
-                        <a href="tel:0908529888" class="text-blue-600 font-semibold">0908.529.888</a> để biết thêm thông tin.
+                        <a href="tel:0389616946" class="text-blue-600 font-semibold">0389616946</a> -
+                        <a href="tel:0869938981" class="text-blue-600 font-semibold">0869938981</a> để biết thêm thông tin.
                     </p>
                 </div>
+                <!-- Thông tin về google maps -->
+                <div class="bg-white shadow-lg rounded-lg mt-6 p-4 max-w-full overflow-hidden">
+                    <div class="relative w-full h-64">
+                        
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d932.2669946671554!2d106.7114090756494!3d20.828961249158944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314a7007c451aba9%3A0xd298e76e2ae9660b!2zNTIyIE5nw7QgR2lhIFThu7EsIFRow6BuaCBUw7QsIEjhuqNpIEFuLCBI4bqjaSBQaMOybmcsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1741609264281!5m2!1svi!2s"
+                            width="100%"
+                            height="100%"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
             </div>
             <div class="lg:col-span-2 md:col-span-6 bg-gray-100 flex flex-col">
 
