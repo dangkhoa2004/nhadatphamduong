@@ -8,6 +8,15 @@
     <title>Nhà Đất Hải Phòng</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        html,
+        body,
+        * {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+    </style>
 </head>
 
 <body class="bg-white">
@@ -213,7 +222,7 @@
                 <!-- Thông tin về google maps -->
                 <div class="bg-white shadow-lg rounded-lg mt-6 p-4 max-w-full overflow-hidden">
                     <div class="relative w-full h-64">
-                        
+
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d932.2669946671554!2d106.7114090756494!3d20.828961249158944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314a7007c451aba9%3A0xd298e76e2ae9660b!2zNTIyIE5nw7QgR2lhIFThu7EsIFRow6BuaCBUw7QsIEjhuqNpIEFuLCBI4bqjaSBQaMOybmcsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1741609264281!5m2!1svi!2s"
                             width="100%"

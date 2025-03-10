@@ -12,7 +12,7 @@
                 @foreach ($rows as $row)
                     <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700 border-gray-200">
                         @foreach($row as $column)
-                            <td class="px-6 py-4">{!! $column !!}</td>
+                            <td class="px-4 py-2 truncate">{!! $column !!}</td>
                         @endforeach
                     </tr>
                 @endforeach

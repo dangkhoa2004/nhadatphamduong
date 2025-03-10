@@ -13,7 +13,7 @@
     $rows = $posts->map(function($post) {
     return [
     $post->code,
-    '<img src="'.$post->images.'" class="w-16 md:w-32 max-w-full max-h-full" alt="IMG">',
+    '<img src="'.$post->images.'" class="w-full sm:w-full md:w-full lg:w-full max-w-full max-h-full object-cover rounded-md" alt="IMG">',
     $post->title,
     $post->area_mb,
     $post->area_sd,
