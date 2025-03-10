@@ -31,12 +31,23 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-            'area' => 'required',
-            'design' => 'required',
-            'location' => 'required',
-            'documents' => 'nullable',
-            'price' => 'required|numeric',
-            'contact' => 'required',
+            'title' => 'nullable',
+            'content' => 'nullable',
+            'link' => 'nullable|url',
+            'code' => 'nullable',
+            'info' => 'nullable',
+            'document_type' => 'nullable',
+            'area_mb' => 'nullable|numeric',
+            'area_sd' => 'nullable|numeric',
+            'width' => 'nullable|numeric',
+            'length' => 'nullable|numeric',
+            'floors' => 'nullable|integer',
+            'bedrooms' => 'nullable|integer',
+            'bathrooms' => 'nullable|integer',
+            'direction' => 'nullable',
+            'feng_shui_direction' => 'nullable',
+            'location' => 'nullable',
+            'posted_at' => 'nullable|date',
             'images' => 'nullable|image'
         ]);
 
@@ -68,15 +79,28 @@ class PostController extends Controller
     public function update(Request $request, $id)
     {
         $data = $request->validate([
-            'area' => 'required',
-            'design' => 'required',
-            'location' => 'required',
-            'documents' => 'nullable',
-            'price' => 'required|numeric',
-            'contact' => 'required',
+            'title' => 'nullable',
+            'content' => 'nullable',
+            'link' => 'nullable|url',
+            'code' => 'nullable',
+            'info' => 'nullable',
+            'document_type' => 'nullable',
+            'area_mb' => 'nullable|numeric',
+            'area_sd' => 'nullable|numeric',
+            'width' => 'nullable|numeric',
+            'length' => 'nullable|numeric',
+            'floors' => 'nullable|integer',
+            'bedrooms' => 'nullable|integer',
+            'bathrooms' => 'nullable|integer',
+            'price' => 'nullable|integer',
+            'direction' => 'nullable',
+            'feng_shui_direction' => 'nullable',
+            'location' => 'nullable',
+            'posted_at' => 'nullable|date',
             'images' => 'nullable|image'
         ]);
 
+        // Xử lý ảnh nếu có
         if ($request->hasFile('images')) {
             $data['images'] = $request->file('images')->store('public/images');
         }

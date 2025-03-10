@@ -1,7 +1,7 @@
 <div class="max-w-screen-xl mx-auto px-4 py-6">
     <div class="font-bold text-xl leading-6 mt-0 relative bg-gray-100">
         <div class="relative">
-            <button id="dropdown-button" class="font-bold inline-block text-base leading-6 m-0 w-full md:w-auto p-3 relative text-white" style="background-color: #68bd45;">
+            <button id="dropdown-button" class="font-bold inline-block text-base leading-6 m-0 w-full md:w-auto p-3 relative text-white bg-green-500">
                 TIN NỔI BẬT
                 <svg id="dropdown-icon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block ml-2 transition-transform transform rotate-0 md:hidden" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M5.293 6.293a1 1 0 011.414 0L10 9.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -73,7 +73,7 @@
             </div>
         </div>
         <div class="lg:col-span-2 md:col-span-6 bg-gray-100 flex flex-col h-auto">
-            <span class="font-bold block p-3 text-white" style="background-color: #68bd45;">
+            <span class="font-bold block p-3 text-white bg-green-500">
                 CẦN BÁN GẤP
             </span>
             <div class="p-3 bg-gray-100">
@@ -94,7 +94,7 @@
             </div>
         </div>
         <div class="lg:col-span-2 md:col-span-6 bg-gray-100 flex flex-col h-auto">
-            <span class="font-bold block p-3 text-white" style="background-color: #68bd45;">
+            <span class="font-bold block p-3 text-white bg-green-500">
                 TIN TỨC
             </span>
             <div class="p-3 bg-gray-100">

@@ -1,41 +1,21 @@
-<!-- resources/views/posts/show.blade.php -->
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
-        <h1 class="text-2xl font-bold">Chi tiết bài đăng</h1>
-        
-        <div class="mt-4">
-            <strong>Area:</strong> {{ $post->area }}
-        </div>
-        <div class="mt-4">
-            <strong>Design:</strong> {{ $post->design }}
-        </div>
-        <div class="mt-4">
-            <strong>Location:</strong> {{ $post->location }}
-        </div>
-        <div class="mt-4">
-            <strong>Documents:</strong> {{ $post->documents }}
-        </div>
-        <div class="mt-4">
-            <strong>Price:</strong> {{ $post->price }}
-        </div>
-        <div class="mt-4">
-            <strong>Contact:</strong> {{ $post->contact }}
-        </div>
-        <div class="mt-4">
-            @if ($post->images)
-                <img src="{{ Storage::url($post->images) }}" alt="Image" class="max-w-xs">
-            @endif
-        </div>
-
-        <div class="mt-4">
-            <a href="{{ route('posts.edit', $post->id) }}" class="bg-yellow-500 text-white p-2 rounded">Chỉnh sửa</a>
-            <form action="{{ route('posts.destroy', $post->id) }}" method="POST" class="inline">
-                @csrf
-                @method('DELETE')
-                <button type="submit" class="bg-red-500 text-white p-2 rounded">Xóa</button>
-            </form>
-        </div>
-    </div>
+<div class="container mx-auto p-6">
+    <h1 class="text-3xl font-bold text-gray-800 mb-6">Chi tiết bài đăng</h1>
+    <form class="bg-white shadow-md rounded-lg p-6 space-y-4">
+        <x-image-field label="Ảnh" :src="$post->images" />
+        <x-input-field label="Tiêu đề" :value="$post->title" disabled />
+        <x-input-field label="Mã bài đăng" :value="$post->code" disabled />
+        <x-input-field label="Diện tích mặt bằng" :value="$post->area_mb . ' m²'" disabled />
+        <x-input-field label="Diện tích sử dụng" :value="$post->area_sd . ' m²'" disabled />
+        <x-input-field label="Số tầng" :value="$post->floors" disabled />
+        <x-input-field label="Phòng ngủ" :value="$post->bedrooms" disabled />
+        <x-input-field label="Phòng toilet" :value="$post->bathrooms" disabled />
+        <x-input-field label="Giá" :value="number_format($post->price, 0, ',', '.') . ' VND'" disabled />
+        <x-input-field label="Địa chỉ" :value="$post->location" disabled />
+        <x-input-field label="Hướng" :value="$post->direction" disabled />
+        <x-input-field label="Hướng phong thủy" :value="$post->feng_shui_direction" disabled />
+    </form>
+</div>
 @endsection

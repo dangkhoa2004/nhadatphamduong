@@ -14,7 +14,7 @@
 <body class="bg-white">
 
     <!-- Include Header -->
-    @include('layouts.header')
+    @include('layouts.header_control')
 
     <!-- Main Content -->
     <main>

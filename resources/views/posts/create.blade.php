@@ -1,43 +1,25 @@
-<!-- resources/views/posts/create.blade.php -->
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
-        <h1 class="text-2xl font-bold">Tạo bài đăng mới</h1>
-        
-        <form action="{{ route('posts.store') }}" method="POST" enctype="multipart/form-data">
-            @csrf
-            <div class="mt-4">
-                <label for="area" class="block">Area</label>
-                <input type="text" id="area" name="area" class="w-full p-2 border" required>
-            </div>
-            <div class="mt-4">
-                <label for="design" class="block">Design</label>
-                <input type="text" id="design" name="design" class="w-full p-2 border" required>
-            </div>
-            <div class="mt-4">
-                <label for="location" class="block">Location</label>
-                <input type="text" id="location" name="location" class="w-full p-2 border" required>
-            </div>
-            <div class="mt-4">
-                <label for="documents" class="block">Documents</label>
-                <textarea id="documents" name="documents" class="w-full p-2 border"></textarea>
-            </div>
-            <div class="mt-4">
-                <label for="price" class="block">Price</label>
-                <input type="number" id="price" name="price" class="w-full p-2 border" required>
-            </div>
-            <div class="mt-4">
-                <label for="contact" class="block">Contact</label>
-                <input type="text" id="contact" name="contact" class="w-full p-2 border" required>
-            </div>
-            <div class="mt-4">
-                <label for="images" class="block">Image</label>
-                <input type="file" id="images" name="images" class="w-full p-2 border">
-            </div>
-            <div class="mt-4">
-                <button type="submit" class="bg-blue-500 text-white p-2 rounded">Tạo bài đăng</button>
-            </div>
-        </form>
-    </div>
+<div class="container mx-auto p-6">
+    <h1 class="text-3xl font-bold text-gray-800 mb-6">Tạo Mới Bài Đăng</h1>
+    <form action="{{ route('posts.store') }}" method="POST" class="bg-white shadow-md rounded-lg p-6 space-y-4" enctype="multipart/form-data">
+        @csrf
+        <x-image-field label="Ảnh" name="images" />
+        <x-input-field label="Tiêu đề" name="title" type="text" />
+        <x-input-field label="Mã bài đăng" name="code" type="text" />
+        <x-input-field label="Diện tích mặt bằng" name="area_mb" type="number" />
+        <x-input-field label="Diện tích sử dụng" name="area_sd" type="number" />
+        <x-input-field label="Số tầng" name="floors" type="number" />
+        <x-input-field label="Phòng ngủ" name="bedrooms" type="number" />
+        <x-input-field label="Phòng toilet" name="bathrooms" type="number" />
+        <x-input-field label="Giá" name="price" type="number" />
+        <x-input-field label="Địa chỉ" name="location" type="text" />
+        <x-input-field label="Hướng" name="direction" type="text" />
+        <x-input-field label="Hướng phong thủy" name="feng_shui_direction" type="text" />
+        <div class="mt-6">
+            <x-primary-button type="submit" text="Tạo bài đăng"/>
+        </div>
+    </form>
+</div>
 @endsection

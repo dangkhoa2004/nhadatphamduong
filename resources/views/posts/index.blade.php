@@ -1,42 +1,34 @@
-<!-- resources/views/posts/index.blade.php -->
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <h1 class="text-2xl font-bold">Danh sách bài đăng</h1>
-    <a href="{{ route('posts.create') }}" class="bg-blue-500 text-white p-2 rounded">Tạo bài đăng mới</a>
+<div class="container mx-auto p-6">
+    <h1 class="text-3xl font-bold text-gray-800 mb-6">Danh sách bài đăng</h1>
+    <x-primary-button
+        :type="'link'"
+        :text="'Tạo bài đăng'"
+        :icon="'fas fa-plus'"
+        :href="route('posts.create')" />
+    @php
+    $headers = ['Mã bài đăng', 'Ảnh', 'Tiêu đề', 'Diện tích MB', 'Diện tích SD', 'Số tầng', 'Phòng ngủ', 'Phòng toilet', 'Giá', 'Địa chỉ', 'Hướng', 'Hướng phong thủy', 'Thao tác'];
+    $rows = $posts->map(function($post) {
+    return [
+    $post->code,
+    '<img src="'.$post->images.'" class="w-16 md:w-32 max-w-full max-h-full" alt="IMG">',
+    $post->title,
+    $post->area_mb,
+    $post->area_sd,
+    $post->floors,
+    $post->bedrooms,
+    $post->bathrooms,
+    $post->price,
+    $post->location,
+    $post->direction,
+    $post->feng_shui_direction,
+    '<a href="'.route('posts.show', $post->id).'" class="font-medium text-blue-600 dark:text-blue-500 hover:underline mr-4">Xem</a>'
+    ];
+    });
+    @endphp
 
-    <table class="mt-4 border-collapse w-full">
-        <thead>
-            <tr>
-                <th class="border px-4 py-2">Mã bài đăng</th>
-                <th class="border px-4 py-2">Area</th>
-                <th class="border px-4 py-2">Design</th>
-                <th class="border px-4 py-2">Location</th>
-                <th class="border px-4 py-2">Giá</th>
-                <th class="border px-4 py-2">Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach ($posts as $post)
-            <tr>
-                <td class="border px-4 py-2">{{ $post->id }}</td>
-                <td class="border px-4 py-2">{{ $post->area }}</td>
-                <td class="border px-4 py-2">{{ $post->design }}</td>
-                <td class="border px-4 py-2">{{ $post->location }}</td>
-                <td class="border px-4 py-2">{{ $post->price }}</td>
-                <td class="border px-4 py-2">
-                    <a href="{{ route('posts.show', $post->id) }}" class="bg-green-500 text-white px-4 py-2 rounded">Chi tiết</a>
-                    <a href="{{ route('posts.edit', $post->id) }}" class="bg-yellow-500 text-white px-4 py-2 rounded">Chỉnh sửa</a>
-                    <form action="{{ route('posts.destroy', $post->id) }}" method="POST" class="inline">
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded">Xóa</button>
-                    </form>
-                </td>
-            </tr>
-            @endforeach
-        </tbody>
-    </table>
+    <x-table :headers="$headers" :rows="$rows" />
 </div>
 @endsection
