@@ -3,11 +3,6 @@
         <div class="container mx-auto flex flex-col lg:flex-row justify-between space-y-6 lg:space-y-0">
             <div class="flex flex-col space-y-2 text-center lg:text-left">
                 <h3 class="font-semibold text-xl">CÔNG TY CỔ PHẦN ĐẦU TƯ PHẠM DƯƠNG</h3>
-                <ul class="space-y-1">
-                    <li><a href="#" class="hover:underline">Nhà đất Phạm Dương</a></li>
-                    <li><a href="#" class="hover:underline">Giá trị của Phạm Dương</a></li>
-                    <li><a href="#" class="hover:underline">Tầm nhìn và Sứ mệnh</a></li>
-                </ul>
             </div>
             <div class="flex flex-col space-y-2 text-center lg:text-left">
                 <button class="dropdown-btn font-semibold text-xl flex justify-between items-center w-full lg:w-auto">
