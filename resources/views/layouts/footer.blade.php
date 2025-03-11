@@ -12,11 +12,11 @@
                     </svg>
                 </button>
                 <ul class="text-sm dropdown-content space-y-1 lg:block hidden">
-                    <li><a href="#" class="hover:underline">Tin tức bất động sản</a></li>
-                    <li><a href="#" class="hover:underline">Phong thủy</a></li>
-                    <li><a href="#" class="hover:underline">Mẫu nhà đẹp</a></li>
-                    <li><a href="#" class="hover:underline">Cần bán nhà</a></li>
-                    <li><a href="#" class="hover:underline">Văn bản pháp luật</a></li>
+                    <li><x-link-component href="#" text="Tin tức bất động sản" /></li>
+                    <li><x-link-component href="#" text="Phong thủy" /></li>
+                    <li><x-link-component href="#" text="Mẫu nhà đẹp" /></li>
+                    <li><x-link-component href="#" text="Cần bán nhà" /></li>
+                    <li><x-link-component href="#" text="Văn bản pháp luật" /></li>
                 </ul>
             </div>
             <div class="flex flex-col space-y-2 text-center lg:text-left">
@@ -27,12 +27,12 @@
                     </svg>
                 </button>
                 <ul class="text-sm dropdown-content space-y-1 lg:block hidden">
-                    <li><a href="#" class="hover:underline">Quy chế hoạt động</a></li>
-                    <li><a href="#" class="hover:underline">Điều khoản sử dụng</a></li>
-                    <li><a href="#" class="hover:underline">Bảng giá dịch vụ</a></li>
-                    <li><a href="#" class="hover:underline">Hướng dẫn đăng tin</a></li>
-                    <li><a href="#" class="hover:underline">Hướng dẫn thanh toán</a></li>
-                    <li><a href="#" class="hover:underline">Trợ giúp pháp lý</a></li>
+                    <li><x-link-component href="#" text="Quy chế hoạt động" /></li>
+                    <li><x-link-component href="#" text="Điều khoản sử dụng" /></li>
+                    <li><x-link-component href="#" text="Bảng giá dịch vụ" /></li>
+                    <li><x-link-component href="#" text="Hướng dẫn đăng tin" /></li>
+                    <li><x-link-component href="#" text="Hướng dẫn thanh toán" /></li>
+                    <li><x-link-component href="#" text="Trợ giúp pháp lý" /></li>
                 </ul>
             </div>
             <div class="flex flex-col space-y-2 text-center lg:text-left">
@@ -43,12 +43,12 @@
                     </svg>
                 </button>
                 <ul class="text-sm dropdown-content space-y-1 lg:block hidden">
-                    <li><a href="#" class="hover:underline">Địa chỉ: .............Cát Bi, Hải Phòng</a></li>
-                    <li><a href="#" class="hover:underline">Điện thoại: (0389) 616 946 | Hotline: 0389 616 946</a></li>
-                    <li><a href="#" class="hover:underline">Email: <a href="mailto:nhadatphamduong@gmail.com" class="hover:underline">nhadatphamduong@gmail.com</a></a></li>
-                    <li><a href="#" class="hover:underline">Hướng dẫn đăng tin</a></li>
-                    <li><a href="#" class="hover:underline">Hướng dẫn thanh toán</a></li>
-                    <li><a href="#" class="hover:underline">Trợ giúp pháp lý</a></li>
+                    <li><x-link-component href="#" text="Địa chỉ: .............Cát Bi, Hải Phòng" /></li>
+                    <li><x-link-component href="#" text="Điện thoại: (0389) 616 946 | Hotline: 0389 616 946" /></li>
+                    <li><x-link-component href="mailto:nhadatphamduong@gmail.com" text="Email: nhadatphamduong@gmail.com" /></li>
+                    <li><x-link-component href="#" text="Hướng dẫn đăng tin" /></li>
+                    <li><x-link-component href="#" text="Hướng dẫn thanh toán" /></li>
+                    <li><x-link-component href="#" text="Trợ giúp pháp lý" /></li>
                 </ul>
             </div>
         </div>

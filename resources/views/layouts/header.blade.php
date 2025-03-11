@@ -1,43 +1,30 @@
-<!-- Navbar -->
 <nav class="bg-red-500">
     <div class="flex justify-between items-center max-w-screen-xl mx-auto px-4 py-3">
-        <!-- Logo Section -->
         <div class="flex items-center space-x-4">
             <span class="text-white font-bold text-xl">PHAM DUONG</span>
         </div>
-
-        <!-- Desktop Menu -->
         <div class="hidden md:flex space-x-6 text-white">
             <a href="/" class="hover:text-yellow-400">Trang Chủ</a>
             <a href="/details" class="hover:text-yellow-400">Sales Phạm Dương</a>
             <a href="/posts" class="hover:text-yellow-400">Đăng tin ngay</a>
         </div>
-
-        <!-- Mobile Menu Button -->
         <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" stroke="currentColor" fill="none">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
             </svg>
         </button>
     </div>
-
-    <!-- Mobile Dropdown Menu -->
     <div id="mobile-menu" class="hidden md:hidden bg-red-600 p-3 space-y-2">
         <a href="/" class="block text-white p-3">Trang Chủ</a>
         <a href="/details" class="block text-white p-3">Sales Phạm Dương</a>
         <a href="/posts" class="block text-white p-3">Đăng tin ngay</a>
     </div>
 </nav>
-
-<!-- Banner Section -->
 <div class="flex justify-center">
     <img src="https://nhadatvanminh.com.vn/images/picture/2366.gif" alt="Banner Image">
 </div>
-
-<!-- Search Bar Section -->
 <div class="bg-gray-100">
     <div class="flex justify-between items-center p-4 max-w-screen-xl mx-auto">
-        <!-- Left Side: Logo and filter -->
         <div class="flex items-center space-x-4">
             <div class="flex flex-col space-y-1 text-green-500">
                 <div class="flex items-center space-x-1">
@@ -49,8 +36,6 @@
                 <span class="font-bold text-black">LỌC TÌM BẤT ĐỘNG SẢN</span>
             </div>
         </div>
-
-        <!-- Right Side: Navigation icons -->
         <div class="hidden sm:flex space-x-4 text-gray-600">
             <div>
                 <i class="fas fa-store h-6 w-6"></i>

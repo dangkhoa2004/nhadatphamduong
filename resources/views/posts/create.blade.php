@@ -18,7 +18,12 @@
         <x-input-field label="Hướng" name="direction" type="text" />
         <x-input-field label="Hướng phong thủy" name="feng_shui_direction" type="text" />
         <div class="mt-6">
-            <x-primary-button type="submit" text="Tạo bài đăng"/>
+            <x-primary-button type="submit" text="Tạo bài đăng" />
+            <x-secondary-button
+                :type="'link'"
+                :text="'Trở về'"
+                :icon="''"
+                :href="route('posts.index')" />
         </div>
     </form>
 </div>

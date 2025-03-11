@@ -16,6 +16,14 @@
         <x-input-field label="Địa chỉ" :value="$post->location" disabled />
         <x-input-field label="Hướng" :value="$post->direction" disabled />
         <x-input-field label="Hướng phong thủy" :value="$post->feng_shui_direction" disabled />
+        <div class="mt-6">
+            <x-primary-button type="" text="Lưu" />
+            <x-secondary-button
+                :type="'link'"
+                :text="'Trở về'"
+                :icon="''"
+                :href="route('posts.index')" />
+        </div>
     </form>
 </div>
 @endsection
