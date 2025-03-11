@@ -4,9 +4,8 @@
             <span class="text-white font-bold text-xl">PHAM DUONG</span>
         </div>
         <div class="hidden md:flex space-x-6 text-white">
-            <a href="/" class="hover:text-yellow-400">Trang Chủ</a>
-            <a href="/details" class="hover:text-yellow-400">Sales Phạm Dương</a>
-            <a href="/posts" class="hover:text-yellow-400">Đăng tin ngay</a>
+            <a href="{{route('index')}}" class="hover:text-yellow-400">Trang Chủ</a>
+            <a href="{{route('posts.index')}}" class="hover:text-yellow-400">Đăng tin ngay</a>
         </div>
         <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" stroke="currentColor" fill="none">
@@ -15,9 +14,8 @@
         </button>
     </div>
     <div id="mobile-menu" class="hidden md:hidden bg-red-600 p-3 space-y-2">
-        <a href="/" class="block text-white p-3">Trang Chủ</a>
-        <a href="/details" class="block text-white p-3">Sales Phạm Dương</a>
-        <a href="/posts" class="block text-white p-3">Đăng tin ngay</a>
+        <a href="{{route('index')}}" class="block text-white p-3">Trang Chủ</a>
+        <a href="{{route('posts.index')}}" class="block text-white p-3">Đăng tin ngay</a>
     </div>
 </nav>
 <div class="flex justify-center">

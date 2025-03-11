@@ -13,32 +13,28 @@ use App\Http\Controllers\PostController;
 |
 */
 
-Route::get('/', [PostController::class, 'trangchu'])->name(name: 'index');
+Route::get('/trang-chu', [PostController::class, 'trangchu'])->name(name: 'index');
 // Xem chi tiết bài đăng
-Route::get('/{id}', [PostController::class, 'trangchuShow'])->name('detail');
-
-Route::get('/details', function () {
-    return view('detail');
-});
+Route::get('/trang-chu/{id}', [PostController::class, 'trangchuShow'])->name('detail');
 
 // Trang chủ - Hiển thị tất cả bài đăng (thay đổi URL từ / thành /posts)
-Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
+Route::get('/quan-ly-bai-dang', [PostController::class, 'index'])->name('posts.index');
 
 // Trang tạo bài đăng mới
-Route::get('/post/create', [PostController::class, 'create'])->name('posts.create');
+Route::get('/quan-ly-bai-dang/tao-moi', [PostController::class, 'create'])->name('posts.create');
 
 // Lưu bài đăng mới
-Route::post('/post', [PostController::class, 'store'])->name('posts.store');
+Route::post('/quan-ly-bai-dang', [PostController::class, 'store'])->name('posts.store');
 
 // Xem chi tiết bài đăng
-Route::get('/post/{id}', [PostController::class, 'show'])->name('posts.show');
+Route::get('/quan-ly-bai-dang/{id}', [PostController::class, 'show'])->name('posts.show');
 
 
 // Form chỉnh sửa bài đăng
-Route::get('/post/{id}/edit', [PostController::class, 'edit'])->name('posts.edit');
+Route::get('/quan-ly-bai-dang/{id}/edit', [PostController::class, 'edit'])->name('posts.edit');
 
 // Cập nhật bài đăng
-Route::put('/post/{id}', [PostController::class, 'update'])->name('posts.update');
+Route::put('/quan-ly-bai-dang/{id}', [PostController::class, 'update'])->name('posts.update');
 
 // Xóa bài đăng
-Route::delete('/post/{id}', [PostController::class, 'destroy'])->name('posts.destroy');
+Route::delete('/quan-ly-bai-dang/{id}', [PostController::class, 'destroy'])->name('posts.destroy');
