@@ -18,6 +18,11 @@ class PostRepository
     {
         return Post::find($id);
     }
+    // Lấy bài đăng theo thời gian tạo
+    public function getLatestPosts(int $limit = 9)
+    {
+        return Post::orderBy('created_at', 'desc')->take($limit)->get();
+    }
 
     // Tạo bài đăng mới
     public function create(array $data): Post

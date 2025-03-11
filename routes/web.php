@@ -13,9 +13,10 @@ use App\Http\Controllers\PostController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [PostController::class, 'trangchu'])->name(name: 'index');
+// Xem chi tiết bài đăng
+Route::get('/{id}', [PostController::class, 'trangchuShow'])->name('detail');
+
 Route::get('/details', function () {
     return view('detail');
 });
@@ -31,6 +32,7 @@ Route::post('/post', [PostController::class, 'store'])->name('posts.store');
 
 // Xem chi tiết bài đăng
 Route::get('/post/{id}', [PostController::class, 'show'])->name('posts.show');
+
 
 // Form chỉnh sửa bài đăng
 Route::get('/post/{id}/edit', [PostController::class, 'edit'])->name('posts.edit');

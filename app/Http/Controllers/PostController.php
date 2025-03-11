@@ -13,21 +13,30 @@ class PostController extends Controller
     {
         $this->postService = $postService;
     }
-
-    // Hiển thị tất cả bài đăng
+    public function trangchu()
+    {
+        $latestPosts = $this->postService->getLatestPosts();
+        return view('index', compact('latestPosts'));
+    }
+    public function trangchuJson()
+    {
+        $latestPosts = $this->postService->getLatestPosts();
+        return response()->json($latestPosts);
+    }
     public function index()
     {
         $posts = $this->postService->getAllPosts();
         return view('posts.index', compact('posts'));
     }
-
-    // Hiển thị form tạo bài đăng
+    public function indexJson()
+    {
+        $posts = $this->postService->getAllPosts();
+        return response()->json($posts);
+    }
     public function create()
     {
         return view('posts.create');
     }
-
-    // Lưu bài đăng mới
     public function store(Request $request)
     {
         $data = $request->validate([
@@ -50,8 +59,6 @@ class PostController extends Controller
             'posted_at' => 'nullable|date',
             'images' => 'nullable|image'
         ]);
-
-        // Xử lý ảnh nếu có
         if ($request->hasFile('images')) {
             $data['images'] = $request->file('images')->store('public/images');
         }
@@ -60,22 +67,21 @@ class PostController extends Controller
 
         return redirect()->route('posts.index');
     }
-
-    // Hiển thị bài đăng chi tiết
     public function show($id)
     {
         $post = $this->postService->getPostById($id);
         return view('posts.show', compact('post'));
     }
-
-    // Hiển thị form chỉnh sửa bài đăng
+    public function trangchuShow($id)
+    {
+        $post = $this->postService->getPostById($id);
+        return view('detail', compact('post'));
+    }
     public function edit($id)
     {
         $post = $this->postService->getPostById($id);
         return view('posts.edit', compact('post'));
     }
-
-    // Cập nhật bài đăng
     public function update(Request $request, $id)
     {
         $data = $request->validate([
@@ -99,8 +105,6 @@ class PostController extends Controller
             'posted_at' => 'nullable|date',
             'images' => 'nullable|image'
         ]);
-
-        // Xử lý ảnh nếu có
         if ($request->hasFile('images')) {
             $data['images'] = $request->file('images')->store('public/images');
         }
@@ -109,8 +113,6 @@ class PostController extends Controller
 
         return redirect()->route('posts.index');
     }
-
-    // Xóa bài đăng
     public function destroy($id)
     {
         $this->postService->deletePost($id);

@@ -20,7 +20,7 @@
 </head>
 
 <body class="bg-white">
-    @include('partials.contact')
+    <x-contact />
     @include('layouts.header')
     <div class="max-w-screen-xl mx-auto px-4 py-6">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4 mt-4">

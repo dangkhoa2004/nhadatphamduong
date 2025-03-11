@@ -20,7 +20,7 @@
 </head>
 
 <body class="bg-white">
-    @include('partials.contact')
+    <x-contact />
     @include('layouts.header')
     @include('partials.newfeed')
     @include('layouts.footer')

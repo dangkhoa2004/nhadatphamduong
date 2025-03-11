@@ -26,6 +26,12 @@ class PostService
     {
         return $this->postRepository->getById($id);
     }
+    
+    // Lấy bài đăng theo thời gian tạo
+    public function getLatestPosts(int $limit = 9)
+    {
+        return $this->postRepository->getLatestPosts($limit);
+    }
 
     // Tạo bài đăng mới
     public function createPost(array $data): Post

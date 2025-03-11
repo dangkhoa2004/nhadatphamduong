@@ -1,6 +1,6 @@
 <div class="max-w-screen-xl mx-auto px-4 py-6">
     <div class="font-bold text-xl leading-6 mt-0 relative bg-gray-100">
-        <x-dropdown-component title="TIN NỔI BẬT" :links="[
+        <x-dropdown-component title="TIN NỔI BẬT" :links="[ 
             ['href' => '#', 'text' => 'Tin mới đăng'],
             ['href' => '#', 'text' => 'Tin V.I.P'],
             ['href' => '#', 'text' => 'Tin bán gấp'],
@@ -12,7 +12,13 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4 mt-4">
         <div class="lg:col-span-8 md:col-span-12 bg-white flex flex-col h-auto lg:h-full">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                <x-card-component imageUrl="https://i.ibb.co/h1h8Jckh/z6389305157284-c45630d5259e5d8013166496bb7d60be.jpg" price="3.300.000.000 VNĐ" location="Bán nhà số 11 Pháp 1, Lạch Tray, Ngô Quyền, Hải Phòng" />
+                @foreach ($latestPosts as $post)
+                <x-card-component
+                    :id="$post->id"
+                    :image_url="$post->images"
+                    :price="$post->price"
+                    :location="$post->location" />
+                @endforeach
             </div>
         </div>
         <div class="lg:col-span-2 md:col-span-6">
