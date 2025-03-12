@@ -23,6 +23,7 @@
     </style>
 </head>
 <body class="bg-white">
+    <x-contact />
     @include('layouts.header')
     <main>
         @yield('content')
