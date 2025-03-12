@@ -42,6 +42,7 @@ class PostController extends Controller
         $data = $request->validate([
             'title' => 'nullable',
             'content' => 'nullable|string',
+            'price' => 'nullable|numeric',
             'link' => 'nullable|url',
             'code' => 'nullable',
             'info' => 'nullable',
@@ -65,10 +66,8 @@ class PostController extends Controller
         if ($request->hasFile('images')) {
             $images = [];
             foreach ($request->file('images') as $image) {
-                // Lưu ảnh vào thư mục storage/app/public/images
                 $images[] = $image->store('images', 'public');
             }
-            // Lưu mảng các đường dẫn ảnh dưới dạng JSON
             $data['images'] = json_encode($images);
         }
         $this->postService->createPost($data);

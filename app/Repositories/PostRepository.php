@@ -7,13 +7,10 @@ use Illuminate\Database\Eloquent\Collection;
 
 class PostRepository
 {
-    // Lấy tất cả bài đăng
     public function getAll(): Collection
     {
         return Post::all();
     }
-
-    // Lấy bài đăng theo ID
     public function getById(int $id): ?Post
     {
         return Post::find($id);
@@ -23,14 +20,11 @@ class PostRepository
     {
         return Post::orderBy('created_at', 'desc')->take($limit)->get();
     }
-
-    // Tạo bài đăng mới
     public function create(array $data): Post
     {
         return Post::create($data);
     }
 
-    // Cập nhật bài đăng
     public function update(int $id, array $data): ?Post
     {
         $post = Post::find($id);
@@ -41,8 +35,6 @@ class PostRepository
 
         return null;
     }
-
-    // Xóa bài đăng
     public function delete(int $id): bool
     {
         $post = Post::find($id);
