@@ -2,9 +2,8 @@
 
 <div class="overflow-hidden rounded-lg relative max-w-screen-xl">
     <div class="slider flex transition-transform duration-500" id="slider">
-        <!-- Lặp qua mảng hình ảnh để hiển thị mỗi ảnh -->
         @foreach($images as $image)
-            <img src="{{ asset('storage/' . $image) }}" class="slide w-full">
+            <img src="{{ asset('storage/' . $image) }}" class="slide w-full" loading="lazy">
         @endforeach
     </div>
     <button class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black text-white p-3 rounded-full hover:bg-gray-700 transition-colors" onclick="moveSlide(-1)">

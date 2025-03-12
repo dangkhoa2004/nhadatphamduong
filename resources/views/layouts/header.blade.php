@@ -19,7 +19,7 @@
     </div>
 </nav>
 <div class="flex justify-center">
-    <img src="http://phamduong1983.com/storage/images/2366.gif" alt="Banner Image">
+    <img src="http://phamduong1983.com/storage/images/2366.gif" alt="Banner Image" loading="lazy">
 </div>
 <div class="bg-gray-100">
     <div class="flex justify-between items-center p-4 max-w-screen-xl mx-auto">
