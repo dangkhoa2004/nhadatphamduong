@@ -9,9 +9,9 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <meta property="og:title" content="Nhà đất Phạm Dương" />
-    <meta property="og:description" content="Chuyên buôn bán, đầu tư, môi giới nhà đất tại hải phòng" />
-    <meta property="og:image" content="URL của hình ảnh thumbnail" />
-    <meta property="og:url" content="URL của trang web" />
+    <meta property="og:description" content="Chuyên buôn bán, đầu tư, môi giới nhà đất tại Hải Phòng" />
+    <meta property="og:image" content="https://example.com/path/to/your-thumbnail-image.jpg" />
+    <meta property="og:url" content="https://example.com" />
     <style>
         html,
         body,
