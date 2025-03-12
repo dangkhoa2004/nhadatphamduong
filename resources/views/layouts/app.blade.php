@@ -12,6 +12,7 @@
     <title>Nhà Đất Hải Phòng</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
         html,
         body,
@@ -23,6 +24,7 @@
         }
     </style>
 </head>
+
 <body class="bg-white">
     <x-contact />
     @include('layouts.header')
