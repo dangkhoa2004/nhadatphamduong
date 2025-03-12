@@ -19,7 +19,7 @@
     </div>
 </nav>
 <div class="flex justify-center">
-    <img src="https://nhadatvanminh.com.vn/images/picture/2366.gif" alt="Banner Image">
+    <img src="http://phamduong1983.com/storage/images/2366.gif" alt="Banner Image">
 </div>
 <div class="bg-gray-100">
     <div class="flex justify-between items-center p-4 max-w-screen-xl mx-auto">

@@ -12,8 +12,5 @@ class DatabaseSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
-    {
-        $this->call(PostSeeder::class);
-    }
+    public function run() {}
 }
