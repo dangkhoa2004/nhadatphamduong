@@ -19,6 +19,7 @@
             -webkit-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
+            scroll-behavior: smooth;
         }
     </style>
 </head>

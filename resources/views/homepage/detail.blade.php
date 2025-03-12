@@ -26,20 +26,6 @@
                     <x-listing-item icon="fas fa-calendar-alt" label="Thời gian đăng" :value="$post->posted_at" />
                 </div>
             </div>
-
-            <div class="bg-white shadow-2xl rounded-lg mt-6 p-6">
-                <x-listing-title title="Chỉ còn 2 căn trong dãy nhà cực đẹp mặt ngõ 522 Ngô Gia Tự." />
-                <x-listing-description description='<span class="font-semibold text-gray-900">Nhà xây mới 4 tầng độc lập, kiên cố, thiết kế hiện đại, trẻ trung, các khu chức năng bố trí hợp lý, công năng sử dụng cao.</span>' />
-                <x-listing-description description='<span class="font-semibold">Cấu trúc nhà:</span> phòng khách, 4 phòng ngủ, phòng thờ, phòng ăn và bếp, sân phơi, 3 toilet.' />
-                <x-listing-description description='<span class="font-semibold">Diện tích MB:</span> 50m², mặt tiền 5m cực đẹp, từ tầng 2 đua ra rộng rãi, <span class="text-red-600 font-bold">giá bán chỉ 4,2 tỷ đồng (có thỏa thuận)</span>.' />
-                <x-listing-description description='<span class="font-semibold text-gray-900">Vị trí cực đẹp:</span>' />
-                <x-listing-features :features="[
-        'Chỉ cách mặt phố Ngô Gia Tự sầm uất chỉ vài bước chân, ngõ thông, giao thông thuận tiện.',
-        'Mặt ngõ rộng rãi, ô tô đỗ cửa.',
-        'Thuộc khu dân cư đông đúc, văn minh, xung quanh ngập tràn tiện ích: gần trường học các cấp, chợ dân sinh, trung tâm thương mại, siêu thị, ngân hàng, bệnh viện,...',]" />
-                <x-listing-description description='Phù hợp vừa ở vừa kinh doanh, buôn bán, mở tiệm nails, salon, cửa hàng tạp hóa, thời trang,...' />
-                <x-listing-contact phone1="0389616946" phone2="0869938981" />
-            </div>
             <x-google-map :src="'https://www.google.com/maps/embed?pb='.$post->link" />
         </div>
         <div class="lg:col-span-2 md:col-span-6 bg-gray-100 flex flex-col">

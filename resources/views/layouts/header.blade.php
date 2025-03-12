@@ -1,7 +1,8 @@
 <nav class="bg-red-500">
     <div class="flex justify-between items-center max-w-screen-xl mx-auto px-4 py-3">
         <div class="flex items-center space-x-4">
-            <span class="text-white font-bold text-xl">PHAM DUONG</span>
+            <a href="{{route('homepage.index')}}"><span class="text-white font-bold text-xl">PHAM DUONG</span></a>
+
         </div>
         <div class="hidden md:flex space-x-6 text-white">
             <a href="{{route('homepage.index')}}" class="hover:text-yellow-400">Trang Chủ</a>
