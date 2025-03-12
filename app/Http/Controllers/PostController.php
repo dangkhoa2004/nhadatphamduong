@@ -41,7 +41,7 @@ class PostController extends Controller
     {
         $data = $request->validate([
             'title' => 'nullable',
-            'content' => 'nullable',
+            'content' => 'nullable|string',
             'link' => 'nullable|url',
             'code' => 'nullable',
             'info' => 'nullable',
@@ -57,16 +57,24 @@ class PostController extends Controller
             'feng_shui_direction' => 'nullable',
             'location' => 'nullable',
             'posted_at' => 'nullable|date',
-            'images' => 'nullable|image'
+            'images' => 'nullable|array'
         ]);
-        if ($request->hasFile('images')) {
-            $data['images'] = $request->file('images')->store('public/images');
+        if (!isset($data['content'])) {
+            $data['content'] = '';
         }
-
+        if ($request->hasFile('images')) {
+            $images = [];
+            foreach ($request->file('images') as $image) {
+                // Lưu ảnh vào thư mục storage/app/public/images
+                $images[] = $image->store('images', 'public');
+            }
+            // Lưu mảng các đường dẫn ảnh dưới dạng JSON
+            $data['images'] = json_encode($images);
+        }
         $this->postService->createPost($data);
-
         return redirect()->route('posts.index');
     }
+
     public function show($id)
     {
         $post = $this->postService->getPostById($id);

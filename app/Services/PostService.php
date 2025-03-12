@@ -26,7 +26,7 @@ class PostService
     {
         return $this->postRepository->getById($id);
     }
-    
+
     // Lấy bài đăng theo thời gian tạo
     public function getLatestPosts(int $limit = 9)
     {
@@ -34,9 +34,13 @@ class PostService
     }
 
     // Tạo bài đăng mới
-    public function createPost(array $data): Post
+    public function createPost($data)
     {
-        return $this->postRepository->create($data);
+        // Nếu 'images' là một chuỗi JSON, bạn có thể chuyển lại thành mảng khi cần sử dụng
+        if (isset($data['images'])) {
+            $data['images'] = json_decode($data['images']);
+        }
+        Post::create($data);
     }
 
     // Cập nhật bài đăng

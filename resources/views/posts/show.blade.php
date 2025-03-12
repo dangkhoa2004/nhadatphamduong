@@ -4,7 +4,7 @@
 <div class="container mx-auto p-6">
     <h1 class="text-3xl font-bold text-gray-800 mb-6">Chi tiết bài đăng</h1>
     <form class="bg-white shadow-md rounded-lg p-6 space-y-4">
-        <x-image-field label="Ảnh" :src="$post->images" />
+        <x-image-display label="Ảnh bài đăng" :src="$post->images" />
         <x-input-field label="Tiêu đề" :value="$post->title" disabled />
         <x-input-field label="Mã bài đăng" :value="$post->code" disabled />
         <x-input-field label="Diện tích mặt bằng" :value="$post->area_mb . ' m²'" disabled />
@@ -17,7 +17,7 @@
         <x-input-field label="Hướng" :value="$post->direction" disabled />
         <x-input-field label="Hướng phong thủy" :value="$post->feng_shui_direction" disabled />
         <div class="mt-6">
-            <x-primary-button type="" text="Lưu" />
+            <x-primary-button type="submit" text="Lưu" />
             <x-secondary-button
                 :type="'link'"
                 :text="'Trở về'"

@@ -31,8 +31,8 @@ class Post extends Model
         'posted_at'
     ];
 
-    // If you want to cast certain fields to a specific type (e.g., dates), you can add the following:
     protected $casts = [
         'posted_at' => 'datetime',
+        'images' => 'array',
     ];
 }
