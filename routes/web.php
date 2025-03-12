@@ -3,9 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 
-Route::get('/', [PostController::class, 'trangchu'])->name('index');
-Route::get('/trang-chu', [PostController::class, 'trangchu'])->name('index');
-Route::get('/trang-chu/{id}', [PostController::class, 'trangchuShow'])->name('detail');
+Route::get('/', [PostController::class, 'trangchu'])->name('homepage.index');
+Route::get('/trang-chu', [PostController::class, 'trangchu'])->name('homepage.index');
+Route::get('/trang-chu/{id}', [PostController::class, 'trangchuShow'])->name('homepage.detail');
 
 Route::get('/quan-ly-bai-dang', [PostController::class, 'index'])->name('posts.index');
 Route::get('/quan-ly-bai-dang/tao-moi', [PostController::class, 'create'])->name('posts.create');

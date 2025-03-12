@@ -16,7 +16,7 @@ class PostController extends Controller
     public function trangchu()
     {
         $latestPosts = $this->postService->getLatestPosts();
-        return view('index', compact('latestPosts'));
+        return view('homepage.index', compact('latestPosts'));
     }
     public function trangchuJson()
     {
@@ -82,7 +82,7 @@ class PostController extends Controller
     public function trangchuShow($id)
     {
         $post = $this->postService->getPostById($id);
-        return view('detail', compact('post'));
+        return view('homepage.detail', compact('post'));
     }
     public function edit($id)
     {

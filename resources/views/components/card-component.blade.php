@@ -1,4 +1,4 @@
-<a href="{{ route('detail', ['id' => $id]) }}">
+<a href="{{ route('homepage.detail', ['id' => $id]) }}">
     <div class="p-2 bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300" style="z-index: 1;">
         <div class="relative">
             <img src="{{ is_array($imageUrl) ? asset('storage/' . $imageUrl[0]) : asset('storage/' . $imageUrl) }}" alt="House Listing" class="w-full h-48 object-cover rounded-lg" loading="lazy">

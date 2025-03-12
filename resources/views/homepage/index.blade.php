@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 <div class="max-w-screen-xl mx-auto px-4 py-6">
     <div class="font-bold text-xl leading-6 mt-0 relative bg-gray-100">
         <x-dropdown-component title="TIN NỔI BẬT" :links="[ 
@@ -63,3 +66,4 @@
         checkScreenSize();
     });
 </script>
+@endsection
