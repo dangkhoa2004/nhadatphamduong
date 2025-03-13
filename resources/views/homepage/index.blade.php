@@ -4,12 +4,8 @@
 <div class="max-w-screen-xl mx-auto px-4 py-6">
     <div class="font-bold text-xl leading-6 mt-0 relative bg-gray-100">
         <x-dropdown-component title="TIN NỔI BẬT" :links="[ 
-            ['href' => '#', 'text' => 'Tin mới đăng'],
-            ['href' => '#', 'text' => 'Tin V.I.P'],
-            ['href' => '#', 'text' => 'Tin bán gấp'],
-            ['href' => '#', 'text' => 'Tin video'],
-            ['href' => '#', 'text' => 'Tin chính chủ'],
-            ['href' => '#', 'text' => 'Tin môi giới'],
+            ['href' => '/trang-chu', 'text' => 'Tin mới đăng'],
+            ['href' => '#', 'text' => 'Tin V.I.P']
         ]" />
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4 mt-4">

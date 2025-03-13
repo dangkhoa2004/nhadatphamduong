@@ -7,7 +7,7 @@
         @csrf
         <x-image-upload label="Hình ảnh" :src="null" name="images" />
         <x-input-field label="Tiêu đề" name="title" type="text" />
-        <x-input-field label="Thông tin" name="info" type="text" />
+        <x-area-field label="Thông tin" name="info" type="text" />
         <x-input-field label="Mã bài đăng" name="code" type="text" />
         <x-input-field label="Diện tích mặt bằng" name="area_mb" type="number" />
         <x-input-field label="Diện tích sử dụng" name="area_sd" type="number" />
@@ -17,7 +17,7 @@
         <x-input-field label="Phòng ngủ" name="bedrooms" type="number" />
         <x-input-field label="Phòng toilet" name="bathrooms" type="number" />
         <x-input-field label="Giá" name="price" type="number" />
-        <x-input-field label="Địa chỉ" name="location" type="text" />
+        <x-area-field label="Địa chỉ" name="location" type="text" />
         <x-input-field label="Hướng" name="direction" type="text" />
         <x-input-field label="Hướng phong thủy" name="feng_shui_direction" type="text" />
         <x-input-field label="Loại giấy tờ" name="document_type" type="text" />
@@ -34,9 +34,7 @@
 </div>
 <script>
     document.getElementById('postForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent form submission
-
-        // Validation for each input
+        event.preventDefault();
         let valid = true;
         const inputs = document.querySelectorAll('input');
 
@@ -48,12 +46,11 @@
                     title: 'Lỗi!',
                     text: 'Vui lòng điền đầy đủ thông tin!',
                 });
-                return false; // Break loop if validation fails
+                return false;
             }
         });
 
         if (valid) {
-            // If validation is successful, submit the form
             this.submit();
         }
     });
