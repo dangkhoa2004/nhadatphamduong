@@ -21,7 +21,7 @@
         <x-input-field label="Hướng" name="direction" type="text" />
         <x-input-field label="Hướng phong thủy" name="feng_shui_direction" type="text" />
         <x-input-field label="Loại giấy tờ" name="document_type" type="text" />
-        <x-input-field label="Liên kết" name="link" type="url" />
+        <x-input-field label="Liên kết" name="link" type="text" />
         <div class="mt-6">
             <x-primary-button type="submit" text="Tạo bài đăng" />
             <x-secondary-button
@@ -32,27 +32,4 @@
         </div>
     </form>
 </div>
-<script>
-    document.getElementById('postForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-        let valid = true;
-        const inputs = document.querySelectorAll('input');
-
-        inputs.forEach(input => {
-            if (input.value.trim() === "") {
-                valid = false;
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Lỗi!',
-                    text: 'Vui lòng điền đầy đủ thông tin!',
-                });
-                return false;
-            }
-        });
-
-        if (valid) {
-            this.submit();
-        }
-    });
-</script>
 @endsection
