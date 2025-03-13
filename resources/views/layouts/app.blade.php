@@ -29,9 +29,7 @@
 <body class="bg-white">
     <x-contact />
     @include('layouts.header')
-    <main>
-        @yield('content')
-    </main>
+    @yield('content')
     @include('layouts.footer')
 
 </body>
