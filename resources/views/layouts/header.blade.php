@@ -20,7 +20,7 @@
     </div>
 </nav>
 <div class="flex justify-center">
-    <img src="{{ asset('storage/images/2366.gif' ) }}" alt="Banner Image" loading="lazy">
+    <img src="{{ asset('storage/images/2366.gif' ) }}" alt="Phạm Dương" loading="lazy" style="width: 1170px; height: 140px;">
 </div>
 <div class="bg-gray-100">
     <div class="flex justify-between items-center p-4 max-w-screen-xl mx-auto">
