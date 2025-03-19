@@ -9,6 +9,7 @@ Route::get('/trang-chu/{id}', [PostController::class, 'trangchuShow'])->name('ho
 
 Route::get('/quan-ly-bai-dang', [PostController::class, 'index'])->name('posts.index');
 Route::get('/quan-ly-bai-dang/tao-moi', [PostController::class, 'create'])->name('posts.create');
+Route::get('/quan-ly-bai-dang/tao-moi-v2', [PostController::class, 'createv2'])->name('posts.createv2');
 Route::post('/quan-ly-bai-dang', [PostController::class, 'store'])->name('posts.store');
 Route::get('/quan-ly-bai-dang/{id}', [PostController::class, 'show'])->name('posts.show');
 Route::get('/quan-ly-bai-dang/{id}/edit', [PostController::class, 'edit'])->name('posts.edit');
