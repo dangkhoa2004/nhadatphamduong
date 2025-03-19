@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bất động sản toàn cầu - Phạm Quỳnh">
-    <meta property="og:title" content="Bất động sản toàn cầu - Phạm Quỳnh" />
-    <meta property="og:description" content="Bất động sản toàn cầu - Phạm Quỳnh" />
+    <meta name="description" content="Nhà đất Hải Phòng - Phạm Dương">
+    <meta property="og:title" content="Nhà đất Hải Phòng - Phạm Dương" />
+    <meta property="og:description" content="Nhà đất Hải Phòng - Phạm Dương" />
     <meta property="og:image" content="{{ asset('storage/images/favicon.ico' ) }}" />
     <meta property="og:url" content="https://example.com" />
-    <title>Bất động sản toàn cầu</title>
+    <title>Nhà đất Phạm Dương</title>
     <link rel="icon" href="{{ asset('storage/images/favicon.ico' ) }}" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">

@@ -5,6 +5,7 @@
     <h1 class="text-3xl font-bold text-gray-800 mb-6">Tạo Mới Bài Đăng</h1>
     <form id="postForm" action="{{ route('posts.store') }}" method="POST" class="bg-white shadow-md rounded-lg p-6 space-y-4" enctype="multipart/form-data">
         @csrf
+        <x-image-upload label="Hình ảnh" :src="null" name="images" />
         <!-- Phần Tiêu đề -->
         <div class="form-group mb-4">
             <label for="title" class="block text-lg font-semibold text-gray-700">Tiêu đề</label>

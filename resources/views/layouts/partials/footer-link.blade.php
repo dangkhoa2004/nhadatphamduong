@@ -2,7 +2,7 @@
     <div class="text-white py-6 max-w-screen-xl mx-auto px-4">
         <div class="container mx-auto flex flex-col lg:flex-row justify-between space-y-6 lg:space-y-0">
             <div class="flex flex-col space-y-2 text-center lg:text-left">
-                <h3 class="font-semibold text-xl">Bất động sản toàn cầu - Phạm Quỳnh</h3>
+                <h3 class="font-semibold text-xl">Nhà đất Hải Phòng - Phạm Dương</h3>
             </div>
             <div class="flex flex-col space-y-2 text-center lg:text-left">
                 <button class="dropdown-btn font-semibold text-xl flex justify-between items-center w-full lg:w-auto">
