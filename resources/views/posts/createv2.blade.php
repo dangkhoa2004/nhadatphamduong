@@ -5,32 +5,31 @@
     <h1 class="text-3xl font-bold text-gray-800 mb-6">Tạo Mới Bài Đăng</h1>
     <form id="postForm" action="{{ route('posts.store') }}" method="POST" class="bg-white shadow-md rounded-lg p-6 space-y-4" enctype="multipart/form-data">
         @csrf
+        <!-- Phần Hình ảnh -->
         <x-image-upload label="Hình ảnh" :src="null" name="images" />
         <!-- Phần Tiêu đề -->
         <div class="form-group mb-4">
             <label for="title" class="block text-lg font-semibold text-gray-700">Tiêu đề</label>
             <input type="text" id="title" name="title" class="form-control mt-2 p-3 w-full border rounded-lg focus:ring-2 focus:ring-blue-500" placeholder="Nhập tiêu đề bài viết" required>
         </div>
-
         <!-- Phần Nội dung -->
         <div class="form-group mb-4">
             <label for="content" class="block text-lg font-semibold text-gray-700">Nội dung</label>
             <textarea id="content" name="content"></textarea> <!-- Chỉnh lại thành textarea để Summernote hoạt động đúng -->
         </div>
-
         <!-- Phần Hashtag -->
         <div class="form-group mb-4">
             <label for="hashtag" class="block text-lg font-semibold text-gray-700">Hashtag</label>
             <input type="text" id="hashtag" name="hashtag" class="form-control mt-2 p-3 w-full border rounded-lg focus:ring-2 focus:ring-blue-500" placeholder="Nhập hashtag (cách nhau bằng dấu phẩy)">
         </div>
-        <!-- <div class="mt-6">
+        <div class="mt-6">
             <x-primary-button type="submit" text="Tạo bài đăng" />
             <x-secondary-button
                 :type="'link'"
                 :text="'Trở về'"
                 :icon="''"
                 :href="route('posts.index')" />
-        </div> -->
+        </div>
     </form>
 </div>
 
