@@ -1,3 +1,4 @@
+// Bản này không dùng được
 @extends('layouts.app')
 
 @section('content')
